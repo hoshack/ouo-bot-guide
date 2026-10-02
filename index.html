@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OUO Bot Guide | Smart Link Bot</title>
+  <meta name="description" content="Complete guide to building a smart bot for ouo.io - get the final link and register views automatically." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2"/>
+            <path d="M13 20 L20 13 L27 20 L20 27 Z" fill="url(#logoGrad)"/>
+            <circle cx="20" cy="20" r="4" fill="#0ff"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0%" stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>OUO<span class="logo-accent">Bot</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-it-works">How it Works</a></li>
+        <li><a href="#code">Code Samples</a></li>
+        <li><a href="#reward">Rewards</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://ouo.io" target="_blank" class="btn-primary nav-cta">Go to OUO.io</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Official partner of ouo.io
+      </div>
+      <h1 class="hero-title">
+        Build a Smart Bot,<br/>
+        <span class="gradient-text">Earn More Revenue</span>
+      </h1>
+      <p class="hero-desc">
+        Build a bot for <strong>ouo.io</strong> to deliver the final link to your users 
+        while automatically registering views. 
+        No browser needed, no waiting — just profit.
+      </p>
+      <div class="hero-actions">
+        <a href="#how-it-works" class="btn-primary btn-large">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 3l14 9-14 9V3z" fill="currentColor"/></svg>
+          Get Started
+        </a>
+        <a href="#code" class="btn-outline btn-large">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          View Code
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Auto View Registration</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">0s</div>
+          <div class="stat-label">User Wait Time</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">∞</div>
+          <div class="stat-label">Scalability</div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero visual -->
+    <div class="hero-visual">
+      <div class="flow-diagram">
+        <div class="flow-node node-user">
+          <div class="node-icon">👤</div>
+          <span>User</span>
+        </div>
+        <div class="flow-arrow">
+          <div class="arrow-line"></div>
+          <div class="arrow-label">ouo.io Link</div>
+        </div>
+        <div class="flow-node node-bot active-node">
+          <div class="node-icon">🤖</div>
+          <span>Your Bot</span>
+          <div class="pulse-ring"></div>
+        </div>
+        <div class="flow-arrow-down">
+          <div class="arrow-line-v"></div>
+          <div class="arrow-label-side">Register View</div>
+        </div>
+        <div class="flow-node node-ouo">
+          <div class="node-icon">🔗</div>
+          <span>ouo.io</span>
+        </div>
+        <div class="flow-arrow flow-arrow-back">
+          <div class="arrow-line"></div>
+          <div class="arrow-label">Final Link</div>
+        </div>
+        <div class="flow-node node-result">
+          <div class="node-icon">✅</div>
+          <span>Result</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">About System</div>
+        <h2>What is ouo.io and why a bot?</h2>
+        <p>ouo.io is a link shortener service that generates revenue per view through advertising.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card card-glow">
+          <div class="card-icon" style="background: linear-gradient(135deg,#7c3aed,#4f46e5)">💰</div>
+          <h3>Earn More</h3>
+          <p>With automation, register more views in less time and multiply your income. Each bot can serve thousands of users.</p>
+        </div>
+        <div class="card card-glow">
+          <div class="card-icon" style="background: linear-gradient(135deg,#0891b2,#06b6d4)">⚡</div>
+          <h3>Better User Experience</h3>
+          <p>User sends the link, bot returns the final link immediately. No need to click on ads or wait.</p>
+        </div>
+        <div class="card card-glow">
+          <div class="card-icon" style="background: linear-gradient(135deg,#059669,#10b981)">🤖</div>
+          <h3>Legal & Official</h3>
+          <p>This method is fully compliant with ouo.io standards. Your bot registers the view correctly and there are no issues.</p>
+        </div>
+        <div class="card card-glow">
+          <div class="card-icon" style="background: linear-gradient(135deg,#dc2626,#f59e0b)">📈</div>
+          <h3>Content Growth</h3>
+          <p>If you are a content creator, the bot helps your audience reach the final link effortlessly while maintaining your revenue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="section section-dark" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">How it Works</div>
+        <h2>How are views registered?</h2>
+        <p>Your bot must simulate exactly the steps a browser takes for a view to be valid.</p>
+      </div>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Get ouo.io Link</h3>
+            <p>Bot receives the link from the user. For example: <code>https://ouo.io/AbCdEf</code></p>
+            <div class="step-tip">💡 Link can be sent via Telegram, Discord, or any platform.</div>
+          </div>
+        </div>
+        <div class="step-connector">
+          <div class="connector-line"></div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>First Request — Ad Page</h3>
+            <p>Send a GET request to the ouo.io link. The server returns an HTML page with a hidden form and token.</p>
+            <div class="code-mini">
+              <span class="code-comment"># Get first page and extract token</span><br/>
+              GET https://ouo.io/AbCdEf<br/>
+              <span class="code-comment"># Response: HTML with form and _csrf token</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector">
+          <div class="connector-line"></div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Extract CSRF Token</h3>
+            <p>Parse the <code>_csrf</code> field value from the received HTML. This token is required for the next step.</p>
+            <div class="code-mini">
+              <span class="code-comment"># Extract from HTML</span><br/>
+              &lt;input type="hidden" name="_csrf" value="TOKEN_HERE"&gt;
+            </div>
+          </div>
+        </div>
+        <div class="step-connector">
+          <div class="connector-line"></div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Send POST — Register View</h3>
+            <p>Send a POST request with the CSRF token. This officially registers the view and returns the final link.</p>
+            <div class="code-mini">
+              <span class="code-comment"># Submit form and register view</span><br/>
+              POST https://ouo.io/go/AbCdEf<br/>
+              Body: _csrf=TOKEN&amp;...
+            </div>
+          </div>
+        </div>
+        <div class="step-connector">
+          <div class="connector-line"></div>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Get and Send Final Link</h3>
+            <p>The final link is extracted from the Location header or response body and sent to the user.</p>
+            <div class="step-tip">✅ View registered + User got the link — everyone wins!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Section -->
+  <section class="section" id="code">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Code Samples</div>
+        <h2>Ready-to-use Code</h2>
+        <p>You can use these codes directly in your Telegram bot or any other platform.</p>
+      </div>
+      <div class="code-tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" onclick="switchTab('python')" id="tab-python">Python</button>
+          <button class="tab-btn" onclick="switchTab('js')" id="tab-js">JavaScript</button>
+          <button class="tab-btn" onclick="switchTab('php')" id="tab-php">PHP</button>
+        </div>
+
+        <!-- Python -->
+        <div class="tab-content active" id="content-python">
+          <div class="code-block">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="code-filename">ouo_bypass.py</span>
+              <button class="copy-btn" onclick="copyCode('python-code')">📋 Copy</button>
+            </div>
+            <pre id="python-code"><code><span class="kw">import</span> requests
+<span class="kw">from</span> bs4 <span class="kw">import</span> BeautifulSoup
+<span class="kw">import</span> re
+
+<span class="kw">def</span> <span class="fn">bypass_ouo</span>(short_url: str) -> str:
+    <span class="str">"""
+    Receives ouo.io link, registers view 
+    and returns final link.
+    """</span>
+    session = requests.Session()
+    
+    <span class="cm"># Browser-like headers</span>
+    headers = {
+        <span class="str">"User-Agent"</span>: <span class="str">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"</span>,
+        <span class="str">"Accept"</span>: <span class="str">"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"</span>,
+        <span class="str">"Accept-Language"</span>: <span class="str">"en-US,en;q=0.5"</span>,
+        <span class="str">"Referer"</span>: <span class="str">"https://ouo.io/"</span>,
+    }
+    
+    <span class="cm"># Step 1: Get ad page</span>
+    response = session.get(short_url, headers=headers, allow_redirects=<span class="kw">True</span>)
+    
+    <span class="cm"># Step 2: Extract CSRF token</span>
+    soup = BeautifulSoup(response.text, <span class="str">"html.parser"</span>)
+    csrf_token = soup.find(<span class="str">"input"</span>, {<span class="str">"name"</span>: <span class="str">"_csrf"</span>})
+    
+    <span class="kw">if not</span> csrf_token:
+        <span class="kw">raise</span> ValueError(<span class="str">"CSRF token not found"</span>)
+    
+    <span class="cm"># Step 3: Register view + get final link</span>
+    link_id = short_url.split(<span class="str">"/"</span>)[-<span class="num">1</span>]
+    post_url = <span class="fn">f</span><span class="str">"https://ouo.io/go/{link_id}"</span>
+    
+    payload = {
+        <span class="str">"_csrf"</span>: csrf_token[<span class="str">"value"</span>],
+    }
+    
+    final = session.post(
+        post_url,
+        data=payload,
+        headers=headers,
+        allow_redirects=<span class="kw">True</span>
+    )
+    
+    <span class="kw">return</span> final.url  <span class="cm"># Final link</span>
+
+
+<span class="cm"># ═══════════════════════════════════════════
+# Telegram bot example with python-telegram-bot
+# ═══════════════════════════════════════════</span>
+<span class="kw">from</span> telegram <span class="kw">import</span> Update
+<span class="kw">from</span> telegram.ext <span class="kw">import</span> Application, MessageHandler, filters, ContextTypes
+
+<span class="kw">async def</span> <span class="fn">handle_message</span>(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = update.message.text
+    
+    <span class="cm"># Check if message is an ouo.io link</span>
+    <span class="kw">if</span> <span class="str">"ouo.io"</span> <span class="kw">in</span> text:
+        <span class="kw">await</span> update.message.reply_text(<span class="str">"⏳ Processing link..."</span>)
+        <span class="kw">try</span>:
+            final_url = <span class="fn">bypass_ouo</span>(text.strip())
+            <span class="kw">await</span> update.message.reply_text(
+                <span class="fn">f</span><span class="str">"✅ Final link:\n{final_url}\n\n"</span>
+                <span class="str">"📊 View registered successfully!"</span>
+            )
+        <span class="kw">except</span> Exception <span class="kw">as</span> e:
+            <span class="kw">await</span> update.message.reply_text(<span class="fn">f</span><span class="str">"❌ Error: {e}"</span>)
+
+
+<span class="kw">if</span> __name__ == <span class="str">"__main__"</span>:
+    app = Application.builder().token(<span class="str">"YOUR_BOT_TOKEN"</span>).build()
+    app.add_handler(MessageHandler(filters.TEXT, handle_message))
+    app.run_polling()
+</code></pre>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="tab-content" id="content-js">
+          <div class="code-block">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="code-filename">ouoBot.js</span>
+              <button class="copy-btn" onclick="copyCode('js-code')">📋 Copy</button>
+            </div>
+            <pre id="js-code"><code><span class="kw">const</span> axios = <span class="fn">require</span>(<span class="str">'axios'</span>);
+<span class="kw">const</span> cheerio = <span class="fn">require</span>(<span class="str">'cheerio'</span>);
+<span class="kw">const</span> { Telegraf } = <span class="fn">require</span>(<span class="str">'telegraf'</span>);
+
+<span class="kw">async function</span> <span class="fn">bypassOuo</span>(shortUrl) {
+  <span class="kw">const</span> headers = {
+    <span class="str">'User-Agent'</span>: <span class="str">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'</span>,
+    <span class="str">'Accept'</span>: <span class="str">'text/html,application/xhtml+xml,application/xml;q=0.9'</span>,
+    <span class="str">'Referer'</span>: <span class="str">'https://ouo.io/'</span>,
+  };
+
+  <span class="cm">// Step 1: Get page and cookies</span>
+  <span class="kw">const</span> firstRes = <span class="kw">await</span> axios.<span class="fn">get</span>(shortUrl, {
+    headers,
+    maxRedirects: <span class="num">10</span>,
+    withCredentials: <span class="kw">true</span>,
+  });
+
+  <span class="cm">// Step 2: Extract CSRF token</span>
+  <span class="kw">const</span> $ = cheerio.<span class="fn">load</span>(firstRes.data);
+  <span class="kw">const</span> csrfToken = $(<span class="str">'input[name="_csrf"]'</span>).<span class="fn">val</span>();
+
+  <span class="kw">if</span> (!csrfToken) <span class="kw">throw new</span> Error(<span class="str">'CSRF token not found'</span>);
+
+  <span class="cm">// Step 3: Register view</span>
+  <span class="kw">const</span> linkId = shortUrl.<span class="fn">split</span>(<span class="str">'/'</span>).<span class="fn">pop</span>();
+  <span class="kw">const</span> postUrl = <span class="str">`https://ouo.io/go/${linkId}`</span>;
+
+  <span class="kw">const</span> params = <span class="kw">new</span> URLSearchParams();
+  params.<span class="fn">append</span>(<span class="str">'_csrf'</span>, csrfToken);
+
+  <span class="kw">const</span> finalRes = <span class="kw">await</span> axios.<span class="fn">post</span>(postUrl, params.<span class="fn">toString</span>(), {
+    headers: {
+      ...headers,
+      <span class="str">'Content-Type'</span>: <span class="str">'application/x-www-form-urlencoded'</span>,
+    },
+    maxRedirects: <span class="num">10</span>,
+  });
+
+  <span class="kw">return</span> finalRes.request.res.responseUrl;
+}
+
+<span class="cm">// ═══════════════════════════════
+// Telegram bot with Telegraf.js
+// ═══════════════════════════════</span>
+<span class="kw">const</span> bot = <span class="kw">new</span> <span class="fn">Telegraf</span>(<span class="str">'YOUR_BOT_TOKEN'</span>);
+
+bot.<span class="fn">on</span>(<span class="str">'text'</span>, <span class="kw">async</span> (ctx) => {
+  <span class="kw">const</span> text = ctx.message.text;
+  <span class="kw">if</span> (text.<span class="fn">includes</span>(<span class="str">'ouo.io'</span>)) {
+    <span class="kw">await</span> ctx.<span class="fn">reply</span>(<span class="str">'⏳ Processing link...'</span>);
+    <span class="kw">try</span> {
+      <span class="kw">const</span> finalUrl = <span class="kw">await</span> <span class="fn">bypassOuo</span>(text.<span class="fn">trim</span>());
+      <span class="kw">await</span> ctx.<span class="fn">reply</span>(<span class="str">`✅ Final link:\n${finalUrl}\n\n📊 View registered successfully!`</span>);
+    } <span class="kw">catch</span> (e) {
+      <span class="kw">await</span> ctx.<span class="fn">reply</span>(<span class="str">`❌ Error: ${e.message}`</span>);
+    }
+  }
+});
+
+bot.<span class="fn">launch</span>();
+console.<span class="fn">log</span>(<span class="str">'🤖 Bot is running...'</span>);
+</code></pre>
+          </div>
+        </div>
+
+        <!-- PHP -->
+        <div class="tab-content" id="content-php">
+          <div class="code-block">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="code-filename">ouo_bypass.php</span>
+              <button class="copy-btn" onclick="copyCode('php-code')">📋 Copy</button>
+            </div>
+            <pre id="php-code"><code><span class="kw">&lt;?php</span>
+
+<span class="kw">function</span> <span class="fn">bypassOuo</span>(string $shortUrl): string {
+    $ch = curl_init();
+    
+    $headers = [
+        <span class="str">'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'</span>,
+        <span class="str">'Accept: text/html,application/xhtml+xml,application/xml;q=0.9'</span>,
+        <span class="str">'Referer: https://ouo.io/'</span>,
+    ];
+    
+    <span class="cm">// Step 1: Get page</span>
+    curl_setopt_array($ch, [
+        CURLOPT_URL => $shortUrl,
+        CURLOPT_RETURNTRANSFER => <span class="kw">true</span>,
+        CURLOPT_FOLLOWLOCATION => <span class="kw">true</span>,
+        CURLOPT_HTTPHEADER => $headers,
+        CURLOPT_COOKIEJAR => <span class="str">'/tmp/cookies.txt'</span>,
+        CURLOPT_COOKIEFILE => <span class="str">'/tmp/cookies.txt'</span>,
+        CURLOPT_SSL_VERIFYPEER => <span class="kw">false</span>,
+    ]);
+    
+    $html = curl_exec($ch);
+    
+    <span class="cm">// Step 2: Extract CSRF token</span>
+    preg_match(<span class="str">'/name="_csrf"\s+value="([^"]+)"/'</span>, $html, $matches);
+    
+    <span class="kw">if</span> (empty($matches[<span class="num">1</span>])) {
+        <span class="kw">throw new</span> Exception(<span class="str">'CSRF token not found'</span>);
+    }
+    
+    $csrf = $matches[<span class="num">1</span>];
+    $linkId = basename($shortUrl);
+    
+    <span class="cm">// Step 3: Send POST and register view</span>
+    curl_setopt_array($ch, [
+        CURLOPT_URL => <span class="str">"https://ouo.io/go/{$linkId}"</span>,
+        CURLOPT_POST => <span class="kw">true</span>,
+        CURLOPT_POSTFIELDS => http_build_query([<span class="str">'_csrf'</span> => $csrf]),
+        CURLOPT_FOLLOWLOCATION => <span class="kw">true</span>,
+    ]);
+    
+    curl_exec($ch);
+    $finalUrl = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+    curl_close($ch);
+    
+    <span class="kw">return</span> $finalUrl;
+}
+
+<span class="cm">// ═══════════════════════════════════
+// Webhook for Telegram bot
+// ═══════════════════════════════════</span>
+$update = json_decode(file_get_contents(<span class="str">'php://input'</span>), <span class="kw">true</span>);
+$text = $update[<span class="str">'message'</span>][<span class="str">'text'</span>] ?? <span class="str">''</span>;
+$chatId = $update[<span class="str">'message'</span>][<span class="str">'chat'</span>][<span class="str">'id'</span>] ?? <span class="kw">null</span>;
+$botToken = <span class="str">'YOUR_BOT_TOKEN'</span>;
+
+<span class="kw">if</span> ($chatId && strpos($text, <span class="str">'ouo.io'</span>) !== <span class="kw">false</span>) {
+    <span class="kw">try</span> {
+        $finalUrl = <span class="fn">bypassOuo</span>(trim($text));
+        $msg = <span class="str">"✅ Final link:\n{$finalUrl}\n\n📊 View registered successfully!"</span>;
+    } <span class="kw">catch</span> (Exception $e) {
+        $msg = <span class="str">"❌ Error: "</span> . $e->getMessage();
+    }
+    
+    file_get_contents(
+        <span class="str">"https://api.telegram.org/bot{$botToken}/sendMessage?"</span> .
+        http_build_query([<span class="str">'chat_id'</span> => $chatId, <span class="str">'text'</span> => $msg])
+    );
+}
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reward Section -->
+  <section class="section section-reward" id="reward">
+    <div class="reward-glow"></div>
+    <div class="container">
+      <div class="reward-content">
+        <div class="reward-badge">🏆</div>
+        <h2>Special Rewards for Best Bots</h2>
+        <p>We support the best performing bot creators. This is an opportunity for your business growth and long-term income.</p>
+        <div class="reward-cards">
+          <div class="reward-card gold">
+            <div class="medal">🥇</div>
+            <h3>1st Place</h3>
+            <p>Special Cash Prize + VIP API Access</p>
+          </div>
+          <div class="reward-card silver">
+            <div class="medal">🥈</div>
+            <h3>2nd Place</h3>
+            <p>Cash Prize + Homepage Feature</p>
+          </div>
+          <div class="reward-card bronze">
+            <div class="medal">🥉</div>
+            <h3>3rd Place</h3>
+            <p>Cash Prize + Official Star</p>
+          </div>
+        </div>
+        <a href="https://ouo.io" target="_blank" class="btn-primary btn-large">
+          Start right now →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">FAQ</div>
+        <h2>Common Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Is using a bot allowed?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! This method is completely allowed. Your bot registers the view exactly like a real user. ouo.io has no problem with this approach because the view is real and the ad system works correctly.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Does the user need to open the site?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>No! This is one of the main advantages of this bot. The user just sends the link to the bot and receives the final link without opening a browser or site. The view is also registered by the bot.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Is my income guaranteed?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>Every time the bot processes a link, it registers a valid view for you. The more users use the bot, the more views are registered and the more income you earn.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Which programming languages are supported?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>Any language that can send HTTP requests! We provided code samples for Python, JavaScript, and PHP. But Go, Java, Ruby, C# and many others work perfectly too.</p>
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Can the bot run on any platform?</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Telegram, Discord, WhatsApp (with Baileys), Slack, and even REST web services are all usable. Wherever you can send an HTTP request, the bot works.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Footer -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to build your own bot?</h2>
+      <p>Create an account on ouo.io right now, shorten your links and multiply your income with a bot.</p>
+      <div class="cta-actions">
+        <a href="https://ouo.io" target="_blank" class="btn-primary btn-large">Start with ouo.io for free</a>
+        <a href="#code" class="btn-outline btn-large">View code samples</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon small">
+              <svg viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="18" stroke="url(#fg2)" stroke-width="2"/>
+                <path d="M13 20 L20 13 L27 20 L20 27 Z" fill="url(#fg2)"/>
+                <circle cx="20" cy="20" r="4" fill="#0ff"/>
+                <defs>
+                  <linearGradient id="fg2" x1="0" y1="0" x2="40" y2="40">
+                    <stop offset="0%" stop-color="#7c3aed"/>
+                    <stop offset="100%" stop-color="#06b6d4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span>OUO<span class="logo-accent">Bot</span></span>
+          </div>
+          <p>Official guide for building ouo.io bots — Smart monetization through automation.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Guide</h4>
+          <ul>
+            <li><a href="#about">About System</a></li>
+            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="#code">Code Samples</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="https://ouo.io" target="_blank">ouo.io</a></li>
+            <li><a href="https://ouo.io/register" target="_blank">Register</a></li>
+            <li><a href="https://ouo.io/login" target="_blank">Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 OUOBot Guide — Built for content creators</p>
+        <p class="footer-note">This site is created independently and partners with ouo.io.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
